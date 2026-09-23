@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TallyReel: faceless videos, made on your computer</title>
+<meta name="description" content="Type an idea or paste your script. TallyReel writes, voices, captions and scores Shorts, YouTube videos and AI podcasts on your Mac or Windows PC. Pay once, make unlimited videos.">
+<meta property="og:title" content="TallyReel: faceless videos, made on your computer">
+<meta property="og:description" content="Idea in, finished Short out. Script, voice, footage, captions and music, on your Mac or PC. $49 once, unlimited videos.">
+<meta name="theme-color" content="#0b0d0f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0e10'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23e0262b'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/barlow-condensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="landing.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" width="0" height="0">
+  <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4.5 4.5 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></symbol>
+  <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5L19 12l-5.5 5.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+</svg>
+
+<header class="top">
+  <a class="brand" href="#top" aria-label="TallyReel home"><span class="tally on" aria-hidden="true"></span><span class="wordmark">TallyReel</span></a>
+  <nav class="top-nav" aria-label="Page">
+    <a href="#how">How it works</a>
+    <a href="#samples">Samples</a><a href="#podcast">Podcasts</a>
+    <a href="#mac">On your computer</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a class="key key-red key-sm" data-buy href="#pricing">Buy · $49</a>
+</header>
+
+<main id="top">
+  <!-- HERO: live switcher -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-copy">
+      <h1 id="hero-h">Faceless videos, made on your computer.</h1>
+      <p class="lede">Idea in, finished Short out: written, voiced, captioned and scored on your Mac or Windows PC.</p>
+      <div class="buy-row">
+        <a class="key key-red key-buy" data-buy href="#pricing">Buy TallyReel · $49</a>
+        <p class="price-note">Launch price, $79 after. Pay once, make unlimited videos.</p>
+      </div>
+
+      <div class="switcher">
+        <p class="switcher-label" id="sw-label">Press a template to see what TallyReel made</p>
+        <div class="bus-keys" role="radiogroup" aria-labelledby="sw-label" id="switcher"></div>
+      </div>
+    </div>
+
+    <figure class="program">
+      <div class="mon-bar">
+        <span class="mon-name"><span class="tally on" aria-hidden="true"></span>Program</span>
+        <span class="tc" id="pgmTc">00:00:00:00</span>
+      </div>
+      <div class="monitor">
+        <video id="pgm" playsinline muted loop preload="auto" poster="media/ocean-depth.jpg" aria-label="Sample video made with TallyReel">
+          <source src="media/ocean-depth.mp4" type="video/mp4">
+        </video>
+        <button class="sound" id="sound" type="button" aria-pressed="false"><svg class="ic"><use href="#i-mute"/></svg><span>Sound off</span></button>
+      </div>
+      <figcaption class="cap">
+        <span class="cap-title" id="capTitle">Depths Unveiled: The Ocean, Its Creatures, and Why Mars Gets the Spotlight</span>
+        <span class="cap-meta"><span id="capNiche">Mind-blowing facts</span> · <span id="capVoice">George, UK</span> · <span class="mono" id="capDur">0:37</span></span>
+        <span class="cap-note">Straight out of TallyReel, unedited</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- HOW IT WORKS: rundown -->
+  <section class="block" id="how" aria-labelledby="how-h">
+    <h2 id="how-h">From idea to posted, in four steps</h2>
+    <ol class="rundown">
+      <li>
+        <span class="rd-num">01</span>
+        <div><h3>Type an idea, or paste your script</h3><p>Pick one of eight templates (facts, dark history, motivation, real estate, local business and more) or write every word yourself.</p></div>
+        <span class="rd-time mono" aria-hidden="true"></span>
+      </li>
+      <li>
+        <span class="rd-num">02</span>
+        <div><h3>Review the script</h3><p>TallyReel writes a hook-first script and plans the footage for each scene. Change any line, and tell it exactly what to show.</p></div>
+        <span class="rd-time mono">~1 min</span>
+      </li>
+      <li>
+        <span class="rd-num">03</span>
+        <div><h3>Render</h3><p>A natural voice reads it, matching stock footage is found, every word is captioned as it's spoken, and a music bed is mixed underneath.</p></div>
+        <span class="rd-time mono">~1 min</span>
+      </li>
+      <li>
+        <span class="rd-num">04</span>
+        <div><h3>Post it</h3><p>Download the MP4 with a title, caption and hashtags ready to copy. Or queue up to 50 ideas at once and come back to a full library.</p></div>
+        <span class="rd-time mono" aria-hidden="true"></span>
+      </li>
+    </ol>
+  </section>
+
+  <!-- YOUR SCRIPT OR OURS -->
+  <section class="block split" aria-labelledby="edit-h">
+    <div class="split-copy">
+      <h2 id="edit-h">Your words, or ours. You approve every line.</h2>
+      <p>AI scripts are a starting point, not a final cut. Before anything renders, you see the whole script scene by scene with the footage each scene will search for. Rewrite a line, swap the shot, add or drop a scene.</p>
+      <p>Already have a script? Paste it. TallyReel keeps your words exactly as written and only plans the footage, title and hashtags around them.</p>
+    </div>
+    <figure class="shot">
+      <picture>
+        <source media="(max-width: 620px)" srcset="media/app-review-mobile.webp" width="812" height="1022">
+        <img src="media/app-review.webp" width="2320" height="1340" loading="lazy" alt="TallyReel's script review screen: a falcon script, each line editable, with the footage search for each scene underneath.">
+      </picture>
+      <figcaption>The review screen in TallyReel, before rendering.</figcaption>
+    </figure>
+  </section>
+
+  <!-- SAMPLES WALL -->
+  <section class="block" id="samples" aria-labelledby="samples-h">
+    <div class="block-head">
+      <h2 id="samples-h">Six niches, six real videos</h2>
+      <p>Each one made by TallyReel from a single idea. Tap to play with sound.</p>
+    </div>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <!-- LONG VIDEOS AND PODCASTS -->
+  <section class="block" id="podcast" aria-labelledby="podcast-h">
+    <div class="block-head">
+      <h2 id="podcast-h">Not just Shorts</h2>
+      <p>Switch to YouTube 16:9 for videos up to 15 minutes, written chapter by chapter with timestamps and a thumbnail. Or let two AI hosts talk it through, with their mouths moving in time on an Apple silicon Mac.</p>
+    </div>
+    <div class="wide-demo">
+      <video controls playsinline preload="none" poster="media/podcast-eiffel.jpg" width="1280" height="720">
+        <source src="media/podcast-eiffel.mp4" type="video/mp4">
+      </video>
+      <p class="wide-demo-cap">Made from one line: "Why the Eiffel Tower was almost torn down." Script, voices, hosts, footage, captions and music, all on the machine that made it.</p>
+    </div>
+  </section>
+
+  <!-- ON YOUR MAC -->
+  <section class="block" id="mac" aria-labelledby="mac-h">
+    <div class="block-head">
+      <h2 id="mac-h">Runs on your computer. No credits, no meter.</h2>
+      <p>The heavy lifting happens on your own machine, so there's nothing to ration. Make ten videos or ten thousand.</p>
+    </div>
+    <dl class="engines">
+      <div><dt><span class="lamp ok"></span>Script writer</dt><dd>Qwen AI model, on your computer — or your own AI key</dd></div>
+      <div><dt><span class="lamp ok"></span>Voices</dt><dd>9 natural US and UK voices, on your computer</dd></div>
+      <div><dt><span class="lamp ok"></span>Your own voice</dt><dd>Clone it from a one-minute recording, on your computer</dd></div>
+      <div><dt><span class="lamp net"></span>Fact research</dt><dd>Scripts take their facts from Wikipedia (needs internet)</dd></div>
+      <div><dt><span class="lamp ok"></span>Captions</dt><dd>Word-timed with Whisper, on your computer</dd></div>
+      <div><dt><span class="lamp ok"></span>Music and render</dt><dd>Composed and mixed on your computer, or bring your own tracks</dd></div>
+      <div><dt><span class="lamp net"></span>Stock footage</dt><dd>Pexels, with your own free key (needs internet)</dd></div>
+    </dl>
+  </section>
+
+  <!-- PRICING -->
+  <section class="block pricing" id="pricing" aria-labelledby="pricing-h">
+    <div class="price-tag">
+      <h2 id="pricing-h">One price. Yours to keep.</h2>
+      <p class="price"><span class="price-now">$49</span><span class="price-was"><s>$79</s><br>Launch price. $79 after launch.</span></p>
+      <p class="price-sub">One-time purchase. No subscription.</p>
+      <ul class="checks">
+        <li><svg class="ic"><use href="#i-check"/></svg>Unlimited videos</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>8 templates, 9 voices, 3 music moods</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Clone your own voice</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Shorts and full 16:9 YouTube videos up to 15 minutes, with chapters</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Two-host AI podcasts and presenter videos</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Talking hosts whose mouths move (Apple silicon)</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Write your own scripts or edit the AI's</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Use the built-in AI free, or plug in your own AI key</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Batch up to 50 videos at a time</li>
+        <li><svg class="ic"><use href="#i-check"/></svg>Titles, captions and hashtags for every video</li>
+      </ul>
+      <div class="buy-row">
+        <a class="key key-red key-buy" data-buy data-checkout href="#pricing">Buy TallyReel · $49</a>
+        <a class="key key-buy" id="downloadTrial" href="/download/mac">Download and try 3 videos free</a>
+      </div>
+      <p class="req">The trial makes three full videos, watermark-free. Buying unlocks it for good on two computers.</p>
+      <p class="req">For Macs with Apple silicon (M1 or newer) and 64-bit Windows 10 or 11 PCs. 16 GB of memory recommended, and about 12 GB of free space for the AI models.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block faq" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details><summary>Will my Mac or PC warn me when I open it?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>The first time, yes: TallyReel isn't signed with Apple's or Microsoft's paid certificates yet, so they ask you to confirm. It takes one click in Settings on a Mac or "Run anyway" on Windows. The <a href="install.html">install guide</a> shows exactly where.</p></details>
+    <details><summary>Does it work on Windows?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. TallyReel runs on 64-bit Windows 10 and 11 as well as Macs with Apple silicon. One purchase, same features.</p></details>
+    <details><summary>Can I use my own AI key instead?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes, and it's optional. TallyReel writes scripts on your computer for free, with no key and no metering. If you'd rather not download the 3 GB script model, or you want sharper writing and a faster machine, paste a key from Anthropic, OpenAI, DeepSeek or OpenRouter in Settings — or point it at Ollama or LM Studio on your own network. You then pay that service directly, usually a few cents a video. Everything else — voices, captions, footage, rendering — still happens on your computer.</p></details>
+    <details><summary>Can it make long YouTube videos?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Pick YouTube 16:9 and a length of 3, 5, 10 or 15 minutes. TallyReel researches the topic, outlines it into chapters, writes each one, and cuts between fresh footage every few seconds. You get the video, a thumbnail, and a description with chapter timestamps. A 10-minute video takes about 15 to 30 minutes on an M-series Mac, depending on its memory and what else is running.</p></details>
+    <details><summary>Can it make podcasts or videos with a presenter?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Podcast mode writes a conversation between two AI hosts and shows them in a studio layout, cutting to footage when they describe something. Presenter mode has one host talking to camera. Hosts are made-up AI people with their own look and voice, and either can use your cloned voice. On an Apple silicon Mac you can switch on <b>talking hosts</b>, where their mouths move with what they say; it needs a one-time 3.7 GB download and adds roughly seven times the talking time to a render. On Windows the hosts are still pictures with captions and a live waveform.</p></details>
+    <details><summary>Can it use my own voice?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes, on Mac and Windows. Record about a minute of yourself talking, read a short consent sentence, and TallyReel clones your voice on your computer. Your recordings never leave it. You can only clone your own voice, and every cloned clip carries an inaudible AI watermark. A graphics card or Apple silicon makes it much faster; on a PC without one, cloned narration takes a few minutes per video.</p></details>
+    <details><summary>Do I need to be online?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Script writing, voices, captions, music and rendering all run on your computer. Finding stock footage needs an internet connection, and so does the optional AI-image mode.</p></details>
+    <details><summary>How long does a video take?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>On an M-series Mac, about a minute and a half for a 30–40 second video with stock footage: roughly 40 seconds to write the script and a minute to render. On a Windows PC, script writing takes one to three minutes depending on the processor. AI-image mode takes several minutes.</p></details>
+    <details><summary>Can I use my own script?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Paste it in and TallyReel keeps every word as written. It splits it into scenes, plans footage for each one and writes a title, caption and hashtags. You can edit all of it before rendering.</p></details>
+    <details><summary>What if the footage doesn't match?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Every scene shows the footage search it will use, and you can change it before rendering. Tell it "falcon diving" and that's what it looks for.</p></details>
+    <details><summary>Where does the footage come from?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Pexels, a free stock video library. You'll need a free Pexels API key, which takes about a minute to get. Pexels videos are free to use under the Pexels license.</p></details>
+    <details><summary>Can I use my own music?<svg class="ic" aria-hidden="true"><use href="#i-plus"/></svg></summary><p>Yes. Drop MP3, WAV or M4A files into your music folder and pick "My tracks". Or use one of the three music moods TallyReel composes for each video.</p></details>
+  </section>
+
+  <section class="close" aria-labelledby="close-h">
+    <h2 id="close-h">Your next video is one idea away.</h2>
+    <a class="key key-red key-buy" data-buy href="#pricing">Buy TallyReel · $49</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="wordmark wordmark-sm">TallyReel</span>
+  <span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="install.html">Install help</a> · Sample footage from <a href="https://www.pexels.com" rel="noopener">Pexels</a> and its contributors.</span>
+</footer>
+
+<script src="landing.js"></script>
+</body>
+</html>

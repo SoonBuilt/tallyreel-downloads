@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       ref:
-        description: "Tag or branch of danishs360/tallyreel to build"
+        description: "Tag or branch of SoonBuilt/tallyreel to build"
         required: true
         default: main
 
@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: danishs360/tallyreel
+          repository: SoonBuilt/tallyreel
           ref: ${{ inputs.ref }}
           ssh-key: ${{ secrets.TALLYREEL_SOURCE_KEY }}
           path: src

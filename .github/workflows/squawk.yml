@@ -1,0 +1,63 @@
+name: Build Squawk (Windows)
+
+# Squawk, the voice-cloning test app (apps/studio/voiceapp.py in the private repository), built for
+# Windows the same way as build.yml builds TallyReel: source read with the read-only deploy key,
+# run by hand only. Before the installer is made, the built app is run end to end on this machine:
+# it downloads the Light engine, judges a sample, clones it and reads a line, or the build fails.
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Tag or branch of danishs360/tallyreel to build"
+        required: true
+        default: main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: squawk-${{ inputs.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: src/apps/studio
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    env:
+      PYTHONUTF8: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: danishs360/tallyreel
+          ref: ${{ inputs.ref }}
+          ssh-key: ${{ secrets.TALLYREEL_SOURCE_KEY }}
+          path: src
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r packaging/requirements-squawk-windows.txt
+      - name: Build with PyInstaller
+        run: pyinstaller packaging/squawk.spec --noconfirm --workpath build/squawk --distpath dist
+      - name: Try the built app (Light engine, clone, speak)
+        shell: pwsh
+        run: |
+          $p = Start-Process dist\Squawk\Squawk.exe -PassThru -Wait `
+               -ArgumentList '--smoke', 'assets\voices\natural\bf_emma.wav', "$env:RUNNER_TEMP\smoke.json"
+          Get-Content "$env:RUNNER_TEMP\smoke.json" -ErrorAction SilentlyContinue
+          if ($p.ExitCode -ne 0) { throw "Squawk's self-test failed with exit code $($p.ExitCode)" }
+      - name: Build installer
+        run: |
+          choco install innosetup -y --no-progress
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" packaging\squawk.iss
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Squawk-windows
+          path: src/apps/studio/dist/Squawk-*-windows-x64-setup.exe

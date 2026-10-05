@@ -42,6 +42,10 @@ jobs:
           ssh-key: ${{ secrets.TALLYREEL_SOURCE_KEY }}
           path: src
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          path: self
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -76,6 +80,19 @@ jobs:
         run: |
           choco install innosetup -y --no-progress
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" packaging\tallyreel.iss
+      # The Store copy, wrapped as an .msix that the Microsoft Store signs. Upload it in
+      # Partner Center (TallyReel > Packages). Store installs don't update themselves (runtime.MS_STORE).
+      - name: Build Microsoft Store package
+        shell: pwsh
+        run: |
+          $v = (Select-String -Path runtime.py -Pattern '^VERSION = "(.+)"').Matches[0].Groups[1].Value
+          & "$env:GITHUB_WORKSPACE\self\store\make-msix.ps1" -AppDir dist\TallyReel -Exe TallyReel.exe `
+            -Name Soonbuilt.TallyReel -DisplayName "TallyReel" -Description "Turn one idea into a finished short video, made by AI on your own computer." `
+            -Version $v -Logo packaging\icon-1024.png -Microphone -Out "dist\TallyReel-$v-store.msix"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TallyReel-store
+          path: src/apps/studio/dist/TallyReel-*-store.msix
       - uses: actions/upload-artifact@v4
         with:
           name: TallyReel-windows

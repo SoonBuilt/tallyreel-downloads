@@ -62,13 +62,13 @@ jobs:
           choco install innosetup -y --no-progress
           & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" packaging\maina.iss
       # The Store copy, wrapped as an .msix that the Microsoft Store signs. Upload it in
-      # Partner Center (maina > Packages).
+      # Partner Center (Maina > Packages).
       - name: Build Microsoft Store package
         shell: pwsh
         run: |
           $v = (Select-String -Path packaging\maina.iss -Pattern '#define AppVersion "(.+)"').Matches[0].Groups[1].Value
           & "$env:GITHUB_WORKSPACE\self\store\make-msix.ps1" -AppDir dist\Maina -Exe Maina.exe `
-            -Name Soonbuilt.maina -DisplayName "maina" -Description "Copy your own voice from a short recording and have it read any text, on your own computer." `
+            -Name Soonbuilt.maina -DisplayName "Maina" -Description "Copy your own voice from a short recording and have it read any text, on your own computer." `
             -Version $v -Logo packaging\maina-1024.png -Microphone -Out "dist\Maina-$v-store.msix"
       - uses: actions/upload-artifact@v4
         with:

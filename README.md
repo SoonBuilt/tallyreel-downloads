@@ -1,10 +1,12 @@
 # TallyReel downloads
 
-The installers for [TallyReel](https://tallyreel.com) — an app that turns an idea into a finished
+**Official site: [tallyreel.com](https://tallyreel.com)**. TallyReel is the faceless video generator that writes, voices and posts your videos.
+
+The installers for [TallyReel](https://tallyreel.com), an app that turns an idea into a finished
 video on your own computer.
 
 - **Get the app:** [tallyreel.com](https://tallyreel.com)
-- **Installers:** on the [Releases](https://github.com/danishs360/tallyreel-downloads/releases) page
+- **Installers:** on the [Releases](https://github.com/SoonBuilt/tallyreel-downloads/releases) page
 - **Update feed:** published with each release as `latest.json`, signed, and mirrored at
   `https://tallyreel.com/updates/latest.json`, which is what installed copies check
 
